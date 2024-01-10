@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <File name="LogToFile" fileName="target/log-output/log_file.log">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} [%t] %level %C{1}.%M(%L) - %msg%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Logger name="AutoSchool" level="warn" additivity="false">
+            <AppenderRef ref="LogToFile"/>
+        </Logger>
+        <Root level="warn">
+            <AppenderRef ref="LogToFile"/>
+        </Root>
+    </Loggers>
+</Configuration>
